@@ -24,21 +24,24 @@
           <nav class="rk-menu__sub">
             <ul class="rk-container">
                 <li  class="rk-menu__item" routerLinkActive="active"><a [routerLink]="[ '/about' ]" >About</a>
-              <li class="rk-menu__item"><a href="#" class="rk-menu__link">Documentation</a></li>
+             
               <li class="rk-menu__item"><a href="#" class="rk-menu__link">Design Styles</a></li>
             </ul>
           </nav>
         </li>
         <li  class="rk-menu__item" routerLinkActive="active"><a [routerLink]="[ '/contact' ]" >Contact</a>
       </ul>
-      <form class="rk-search">
-        <input type="text" placeholder="Search" id="urku-search" class="rk-search-field">
+      <div class="rk-search">
+        <input (keyup.enter)= "searchProduct(texto.value)"
+                #texto
+                type="text" placeholder="Search..." id="urku-search"
+                class="rk-search-field">
         <label for="urku-search">
           <svg>
             <use xlink:href="assets/img/symbols.svg#icon-search"></use>
           </svg>
         </label>
-      </form>
+      </div>
     </nav>
   </div>
 </header>

@@ -4,7 +4,7 @@
 
     <div class="ae-grid au-xs-ta-center au-mb-4">
 
-      <div *ngFor="let team of teams; let i = index"
+      <div *ngFor="let team of _service.equipo; let i = index"
       class="animated fadeIn ae-grid__item item-lg-4 ae-kappa au-mb-3">
         <img [src]="team.url" alt="" class="au-mb-3">
         <h5 class="ae-u-bolder au-mt-2">{{ team.nombre }}</h5>

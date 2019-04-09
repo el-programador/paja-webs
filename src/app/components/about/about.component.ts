@@ -8,12 +8,8 @@ import { InfoPaginaService } from 'src/app/services/info-pagina.service';
 })
 export class AboutComponent implements OnInit {
 
-  teams:any[] = [];
-
   constructor( public _service: InfoPaginaService ) {
    
-    this.teams = this._service.equipo
-
    }
   
   ngOnInit() {

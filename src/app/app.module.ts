@@ -16,6 +16,7 @@ import { HomeComponent } from './components/home/home.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PostComponent } from './components/post/post.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { PostComponent } from './components/post/post.component';
     BlogComponent,
     ContactComponent,
     PostComponent,
+    SearchComponent,
    
   ],
   imports: [

@@ -31,7 +31,7 @@ export class InfoPaginaService {
 
   return  this._http.get('https://paja-web-s.firebaseio.com/equipo.json').subscribe((res:any[])=>{
     this.equipo = res;
-    console.log(this.equipo);
+   // console.log(this.equipo);
     })
 
    }
