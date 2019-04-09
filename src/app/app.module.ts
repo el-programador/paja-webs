@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 //routea
 import { FeatureRoutingModule } from './app.routes';
@@ -27,11 +28,13 @@ import { PostComponent } from './components/post/post.component';
     HomeComponent,
     BlogComponent,
     ContactComponent,
-    PostComponent
+    PostComponent,
+   
   ],
   imports: [
     BrowserModule,
-    FeatureRoutingModule
+    FeatureRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
