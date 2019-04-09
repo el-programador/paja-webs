@@ -1,7 +1,7 @@
 <style>
   #map-container {
     width: 100%;
-    height: 0;
+    height: 500px;
     margin: 0 auto;
     padding-top: 134.74026%;
     position: relative;
@@ -21,15 +21,22 @@
   <div class="ae-grid">
     <div class="ae-grid__item item-lg-6 item-lg--offset-7">
       <h4 class="ae-u-bolder au-mb-3 conatct__title">Contact Us</h4>
-      <p class="au-mb-4 contact__desc">Say hello using the <a href="#contact-form">contact form </a>below! <br>We're standing by to help.</p>
+      <p class="au-mb-4 contact__desc">Say hello using the 
+        <a href="#contact-form">contact form </a>below! <br>We're standing by to help.</p>
     </div>
   </div>
   <div class="ae-grid">
+
     <div class="ae-grid__item item-lg-6">
       <div id="map-container">
-        <div id="map"></div>
+        <div id="map">
+          Google maps
+         <p> (no disponible en estos momentos)</p>
+        </div>
       </div>
     </div>
+
+
     <div class="ae-grid__item item-lg-6">
       <div class="ae-grid ae-grid--collapse">
         <div class="ae-grid__item item-lg-2 au-v-hidden au-lg-v-visible">
@@ -40,8 +47,12 @@
           </button>
         </div>
         <div class="ae-grid__item item-lg-10 au-xs-ta-center au-lg-ta-left">
-          <p class="au-mb-4 contact__addr">123 Everystreet Crescent<br>Somewheresville, CA<br>12345 USA</p>
-          <p> <span class="contact__phone"> <span class="rk-light-color">Phone  </span> (301) 123-4567</span><br><span class="contact__email au-block au-truncate"> <span class="rk-light-color">Email &nbsp;&nbsp; </span><a href="#0">infocompany@contact.com</a></span></p>
+          <p class="au-mb-4 contact__addr">Valdemoro<br>Madrid<br>28340 SPAIN</p>
+          <p> <span class="contact__phone"> <span class="rk-light-color">Phone  </span>
+             (+34) 645444001</span><br>
+             <span class="contact__email au-block au-truncate">
+                <span class="rk-light-color">Email &nbsp;&nbsp; </span>
+                <a href="#0">paja@contact.com</a></span></p>
         </div>
         <div class="contact_spacer au-none au-lg-block"></div>
       </div>
@@ -64,8 +75,8 @@
 
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <script>
-  var pxLat = 40.767812,
-      pxLng = -73.962014;
+  var pxLat = 40.1893855,
+      pxLng = -3.6789051;
   
   // When the window has finished loading create our google map below
   var map = google.maps.event.addDomListener(window, 'load', init);
@@ -109,11 +120,11 @@
           title: 'Pixeden!'
       });
   
-      //- map.addListener('center_changed', function() {
-      //-     window.setTimeout(function() {
-      //-       map.panTo(marker.getPosition());
-      //-     }, 500);
-      //- });
+      map.addListener('center_changed', function() {
+           window.setTimeout(function() {
+           map.panTo(marker.getPosition());
+          }, 500);
+       });
   }
   
   function newLocation(level) {
@@ -123,5 +134,5 @@
   
   document.querySelector('#map-arrow').addEventListener('click', function() {
     newLocation(Math.round(Math.random()*10) + 13);
-  }, false);
+  }, flase);
 </script>
